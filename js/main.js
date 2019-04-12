@@ -1,12 +1,12 @@
 $(function() {
     //no cheating
-    var flag = $.trim($.ajax({type: "GET", url: "https://raw.githubusercontent.com/JoeManto/BarcodeCTF/master/answer.txt", async: false}).responseText);
-    console.log(flag);
+    let flag = $.trim($.ajax({type: "GET", url: "answer.txt", async: false}).responseText);
+
+
     let c = s2(s1(350))- Math.sqrt(Infinity);
     let v = config(c,"0",1,0,0);
     $('p:first').text(function() {return v});
     $( "#check" ).click(function() {
-        console.log($("#input").val());
        if(flag === $("#input").val()){
            console.log("good job");
        }else{
@@ -31,3 +31,4 @@ function s1(num){
 function s2(num){
     for(;num<=8;num++){num = num>>num;}return num;
 }
+
